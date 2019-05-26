@@ -33,3 +33,15 @@ class Game:
             guess = int(guess)
         except ValueError:
             raise ValueError('Should be a number')
+
+        if guess not in range(START, END+1):
+            raise ValueError('Number not in range')
+
+        if guess not in self._guesses:
+            raise ValueError('Already guessed')
+
+        self._guesses.add(guess)
+        return guess
+
+    def _validate_guess(self, guess):
+        pass
