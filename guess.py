@@ -45,3 +45,7 @@ class Game:
 
     def _validate_guess(self, guess):
         pass
+
+
+game = Game()
+game
